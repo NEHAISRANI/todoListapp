@@ -10,7 +10,7 @@ module.exports = (app) => {
                 res.send(new1)
             }) 
             .catch((err) => { 
-                res.send(err)
+                res.send(err) 
             })
     })
 
