@@ -6,10 +6,10 @@ module.exports = (app) => {
             task: req.body.task
         } 
         knex.post_query(data)
-            .then(() => { 
-                res.send('update')
-            })
-            .catch((err) => {
+            .then((new1) => { 
+                res.send(new1)
+            }) 
+            .catch((err) => { 
                 res.send(err)
             })
     })
