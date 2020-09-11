@@ -28,13 +28,13 @@ module.exports = (app) => {
 
     app.put('/put/:id', (req, res) => {
         var id = req.params.id;
-        const data = {
+        const putData = {
             task: req.body.task
         }
-        knex.put_query(data, id)
+        knex.put_query(putData, id)
             .then((getData) => {
                 res.json(getData)
-            })
+            }) 
             .catch((err) => {
                 res.send(err)
             })
